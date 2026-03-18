@@ -1,0 +1,125 @@
+.panel {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.previewWindow {
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 1.75rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04)),
+    rgba(7, 12, 26, 0.5);
+  backdrop-filter: blur(22px);
+}
+
+.previewHeader {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.previewHeader span {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.previewStage {
+  position: relative;
+  min-height: 18rem;
+  padding: 1rem;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(161, 161, 247, 0.48), transparent 32%),
+    radial-gradient(circle at 80% 26%, rgba(3, 136, 166, 0.38), transparent 28%),
+    linear-gradient(180deg, rgba(12, 18, 37, 0.9), rgba(10, 15, 31, 0.72));
+}
+
+.primaryWave {
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  top: 28%;
+  height: 5rem;
+  border-radius: 999px;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.16)),
+    linear-gradient(90deg, rgba(249, 185, 92, 0.4), rgba(3, 136, 166, 0.4));
+  box-shadow: 0 0 2.4rem rgba(161, 161, 247, 0.2);
+}
+
+.sideMetric {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  display: grid;
+  gap: 0.3rem;
+  padding: 0.85rem 1rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 0.92rem;
+}
+
+.sideMetric strong {
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sideMetric span {
+  color: rgba(255, 255, 255, 0.74);
+}
+
+.timeline {
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.timeline span {
+  height: 0.85rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.timeline span:nth-child(1) {
+  width: 100%;
+}
+
+.timeline span:nth-child(2) {
+  width: 72%;
+}
+
+.timeline span:nth-child(3) {
+  width: 46%;
+}
+
+.checklist {
+  display: grid;
+  gap: 0.85rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.checklist li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.checklist li::before {
+  content: '';
+  width: 0.58rem;
+  height: 0.58rem;
+  border-radius: 999px;
+  background: #f9b95c;
+  box-shadow: 0 0 1.8rem rgba(249, 185, 92, 0.5);
+}

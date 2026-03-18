@@ -1,0 +1,13 @@
+.section {
+  padding-top: clamp(4rem, 8vw, 6rem);
+}
+
+.layout {
+  display: grid;
+  gap: clamp(2rem, 4vw, 3rem);
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
