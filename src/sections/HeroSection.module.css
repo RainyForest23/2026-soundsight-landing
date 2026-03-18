@@ -1,0 +1,358 @@
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: max(46rem, calc(var(--app-height) - 1rem));
+  padding-top: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(22rem, 0.98fr);
+  gap: clamp(2rem, 5vw, 4.2rem);
+  align-items: center;
+}
+
+.copy {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.brandRow {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  width: fit-content;
+  padding: 0.9rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(109, 118, 150, 0.16);
+  background: rgba(255, 255, 255, 0.56);
+  box-shadow: 0 12px 34px rgba(118, 135, 182, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+.logo {
+  width: 3rem;
+  height: 3rem;
+  flex: none;
+  object-fit: cover;
+  border-radius: 999px;
+  background: #f4f2f4;
+  box-shadow: 0 0 0 1px rgba(119, 128, 158, 0.08);
+}
+
+.brandName,
+.brandTag {
+  display: block;
+}
+
+.brandName {
+  color: var(--text-strong);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.brandTag {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
+.title {
+  margin: 0;
+  max-width: 12ch;
+  color: var(--text-strong);
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 0.94;
+  letter-spacing: -0.065em;
+}
+
+.description {
+  margin: 0;
+  max-width: 40rem;
+  color: var(--text-muted);
+  font-size: clamp(1rem, 2vw, 1.14rem);
+  line-height: 1.86;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.statCard {
+  display: grid;
+  gap: 0.45rem;
+  padding: 1.15rem;
+  border-radius: 1.4rem;
+  border: 1px solid rgba(104, 116, 154, 0.16);
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 16px 40px rgba(123, 140, 181, 0.07);
+  backdrop-filter: blur(18px);
+}
+
+.statCard strong {
+  color: var(--text-strong);
+  font-size: 1.08rem;
+  letter-spacing: -0.03em;
+}
+
+.statCard span {
+  color: var(--text-muted);
+  font-size: 0.86rem;
+}
+
+.scrollWrap {
+  padding-top: 0.8rem;
+}
+
+.visual {
+  position: relative;
+  display: grid;
+}
+
+.visualShell {
+  display: grid;
+  gap: 1.2rem;
+  padding: clamp(1.2rem, 3vw, 1.75rem);
+  border-radius: 2rem;
+  border: 1px solid rgba(121, 132, 168, 0.16);
+  background:
+    linear-gradient(155deg, rgba(255, 255, 255, 0.66), rgba(255, 255, 255, 0.38)),
+    rgba(255, 255, 255, 0.36);
+  box-shadow: 0 30px 80px rgba(120, 138, 184, 0.12);
+  backdrop-filter: blur(28px);
+}
+
+.visualHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: rgba(92, 103, 136, 0.78);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.visualHeader strong {
+  color: var(--text-strong);
+  font-size: 0.84rem;
+}
+
+.pipelineStage {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 1.65rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(238, 242, 255, 0.62)),
+    rgba(255, 255, 255, 0.44);
+  border: 1px solid rgba(126, 138, 176, 0.14);
+}
+
+.sceneCard {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.sceneLabel {
+  width: fit-content;
+  padding: 0.4rem 0.72rem;
+  border-radius: 999px;
+  background: rgba(150, 120, 248, 0.12);
+  color: #6f58c9;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.sceneFrame {
+  position: relative;
+  min-height: 9rem;
+  border-radius: 1.35rem;
+  overflow: hidden;
+  border: 1px solid rgba(103, 116, 154, 0.12);
+  background:
+    radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.85), transparent 26%),
+    linear-gradient(130deg, rgba(17, 151, 194, 0.24), rgba(150, 120, 248, 0.24) 58%, rgba(255, 255, 255, 0.72));
+}
+
+.sceneGlow {
+  position: absolute;
+  inset: auto -6% -28% auto;
+  width: 52%;
+  aspect-ratio: 1;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(151, 121, 248, 0.82), rgba(151, 121, 248, 0));
+  filter: blur(12px);
+  opacity: 0.85;
+}
+
+.sceneCaption {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.74);
+  color: #5f6886;
+  font-size: 0.88rem;
+  box-shadow: 0 10px 28px rgba(123, 140, 181, 0.12);
+}
+
+.bridge {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 7rem;
+  border-radius: 1.4rem;
+  background:
+    linear-gradient(90deg, rgba(150, 120, 248, 0.24), rgba(117, 219, 247, 0.18)),
+    rgba(255, 255, 255, 0.54);
+}
+
+.bridgeGlow {
+  position: absolute;
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(150, 120, 248, 0.32), rgba(22, 152, 190, 0.3));
+}
+
+.pipelineLogo {
+  position: relative;
+  width: 4.5rem;
+  height: 4.5rem;
+  object-fit: cover;
+  border-radius: 999px;
+  background: #f4f2f4;
+  box-shadow:
+    0 0 0 10px rgba(255, 255, 255, 0.55),
+    0 18px 34px rgba(118, 135, 182, 0.16);
+}
+
+.waveWrap {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.waveLabel {
+  color: rgba(92, 103, 136, 0.86);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.waveform {
+  display: flex;
+  align-items: center;
+  gap: 0.22rem;
+  min-height: 7rem;
+  padding: 1rem;
+  border-radius: 1.35rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.62), rgba(237, 241, 255, 0.5)),
+    rgba(255, 255, 255, 0.42);
+  overflow: hidden;
+}
+
+.waveform span {
+  flex: 1 1 0;
+  align-self: center;
+  min-height: 0.75rem;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #d945b8 0%, #7c4ef2 58%, #1497be 100%);
+}
+
+.visualMetrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.metricCard {
+  display: grid;
+  gap: 0.42rem;
+  padding: 1rem;
+  border-radius: 1.2rem;
+  background: rgba(255, 255, 255, 0.48);
+  border: 1px solid rgba(121, 132, 168, 0.12);
+}
+
+.metricCard span {
+  color: rgba(95, 105, 135, 0.72);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.metricCard strong {
+  color: var(--text-strong);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.floatingCard {
+  position: absolute;
+  right: -1rem;
+  bottom: -1rem;
+  display: grid;
+  gap: 0.35rem;
+  padding: 1rem 1.1rem;
+  border-radius: 1.25rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(185, 237, 250, 0.92));
+  color: #56607c;
+  box-shadow: 0 18px 48px rgba(117, 219, 247, 0.18);
+}
+
+.floatingCard span {
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.floatingCard strong {
+  color: var(--text-strong);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 980px) {
+  .hero {
+    min-height: auto;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    max-width: none;
+  }
+
+  .floatingCard {
+    position: static;
+    margin-top: 1rem;
+    width: fit-content;
+  }
+}
+
+@media (max-width: 640px) {
+  .stats,
+  .visualMetrics {
+    grid-template-columns: 1fr;
+  }
+
+  .brandRow {
+    width: 100%;
+  }
+
+  .waveform {
+    gap: 0.14rem;
+    padding-inline: 0.8rem;
+  }
+}
