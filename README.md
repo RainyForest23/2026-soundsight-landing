@@ -39,7 +39,7 @@ npm run dev
 ## Content Update Points
 
 - 최종 카피, CTA 링크, 연락처, SNS 링크는 `src/data/siteContent.ts`에서 한 번에 바꿀 수 있습니다.
-- 실제 로고 에셋이 들어오면 `src/components/brand/SoundSightMark.tsx`를 교체하면 됩니다.
+- 실제 로고 파일은 `public/soundsight-logo.svg` 기준으로 연결되어 있습니다.
 - 데모 영상, iframe, 앱 다운로드 버튼은 `src/sections/DemoSection.tsx`와 `src/components/common/DemoHighlight.tsx`에서 연결할 수 있습니다.
 
 ## Git Workflow
