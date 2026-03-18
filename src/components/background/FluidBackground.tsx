@@ -3,10 +3,13 @@ import styles from './FluidBackground.module.css';
 
 const orbs = [
   'var(--mesh-lavender)',
-  'var(--mesh-pink)',
   'var(--mesh-gold)',
   'var(--mesh-teal)',
-  'var(--mesh-sky)',
+];
+
+const liquidBlobs = [
+  'var(--mesh-lavender)',
+  'var(--mesh-teal)',
 ];
 
 export function FluidBackground() {
@@ -26,8 +29,21 @@ export function FluidBackground() {
           }
         />
       ))}
+      <div className={styles.liquidField}>
+        {liquidBlobs.map((color, index) => (
+          <span
+            key={`${color}-${index}`}
+            className={styles.liquidBlob}
+            style={
+              {
+                '--liquid-color': color,
+                '--liquid-delay': `${index * -3.5}s`,
+              } as CSSProperties
+            }
+          />
+        ))}
+      </div>
       <div className={styles.rippleField}>
-        <span className={styles.ripple} />
         <span className={styles.ripple} />
         <span className={styles.ripple} />
       </div>

@@ -3,5 +3,5 @@ type SoundSightMarkProps = {
 };
 
 export function SoundSightMark({ className }: SoundSightMarkProps) {
-  return <img className={className} src="/soundsight-logo.svg" alt="SoundSight logo" />;
+  return <img className={className} src="/logo.svg" alt="SoundSight logo" />;
 }

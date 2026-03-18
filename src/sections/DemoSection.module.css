@@ -22,9 +22,8 @@
   border-radius: 2rem;
   border: 1px solid rgba(121, 132, 168, 0.16);
   background:
-    linear-gradient(160deg, rgba(255, 255, 255, 0.68), rgba(255, 255, 255, 0.42)),
-    rgba(255, 255, 255, 0.34);
-  backdrop-filter: blur(24px);
+    linear-gradient(160deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.64)),
+    rgba(255, 255, 255, 0.76);
   box-shadow: 0 22px 58px rgba(123, 140, 181, 0.12);
 }
 

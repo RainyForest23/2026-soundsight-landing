@@ -11,9 +11,8 @@
   border: 1px solid rgba(121, 132, 168, 0.16);
   border-radius: 2rem;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.42)),
-    rgba(255, 255, 255, 0.34);
-  backdrop-filter: blur(26px);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.62)),
+    rgba(255, 255, 255, 0.74);
   box-shadow: 0 22px 58px rgba(123, 140, 181, 0.1);
 }
 
