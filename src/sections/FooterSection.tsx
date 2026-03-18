@@ -12,8 +12,8 @@ export function FooterSection() {
         <div className={styles.summary}>
           <span className={styles.label}>SoundSight</span>
           <p>
-            데모 링크, 로고 에셋, 서비스 소개 문구가 확정되면 이 랜딩 페이지는 그대로 유지한 채 콘텐츠만 빠르게
-            교체할 수 있도록 구조화했습니다.
+            발표자료 레퍼런스와 프로젝트 브랜치 문서를 바탕으로 핵심 메시지를 정리해두었습니다. 실제 데모
+            자산과 최종 링크만 추가하면 공개용 랜딩으로 바로 전환할 수 있습니다.
           </p>
         </div>
 

@@ -28,11 +28,11 @@ export function DemoSection() {
             viewport={viewport}
             variants={fadeUp(0.16)}
           >
-            <span className={styles.panelEyebrow}>Action Layer</span>
-            <h3>데모 연결 전환율을 높이기 위한 CTA 집중 영역</h3>
+            <span className={styles.panelEyebrow}>Demo Structure</span>
+            <h3>샘플 장면과 해석 결과를 곧바로 연결하는 설명 영역</h3>
             <p>
-              실제 영상, 앱스토어 링크, 웹 데모 URL 중 어떤 자산이 먼저 준비되더라도 이 영역만 교체해서
-              즉시 연결할 수 있도록 설계했습니다.
+              현재는 레퍼런스 PDF 기준으로 설명 흐름을 맞춰 두었습니다. 실제 데모 영상, 시연 링크, 팀
+              소개 자료가 준비되면 이 영역에서 바로 공개용 액션으로 전환할 수 있습니다.
             </p>
 
             <div className="buttonRow">
@@ -46,12 +46,12 @@ export function DemoSection() {
 
             <div className={styles.notes}>
               <div>
-                <span>Embed Ready</span>
-                <strong>iframe / HTML5 video slot</strong>
+                <span>Demo Asset</span>
+                <strong>영상 샘플 또는 시연 URL</strong>
               </div>
               <div>
-                <span>Conversion</span>
-                <strong>contact, install, signup</strong>
+                <span>Supporting Docs</span>
+                <strong>포스터, 발표자료, 프로젝트 소개서</strong>
               </div>
             </div>
           </motion.aside>

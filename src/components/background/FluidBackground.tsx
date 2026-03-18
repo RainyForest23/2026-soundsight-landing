@@ -3,10 +3,10 @@ import styles from './FluidBackground.module.css';
 
 const orbs = [
   'var(--mesh-lavender)',
-  'var(--mesh-cherry)',
-  'var(--mesh-olive)',
-  'var(--mesh-butter)',
+  'var(--mesh-pink)',
+  'var(--mesh-gold)',
   'var(--mesh-teal)',
+  'var(--mesh-sky)',
 ];
 
 export function FluidBackground() {

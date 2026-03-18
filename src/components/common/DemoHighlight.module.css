@@ -5,12 +5,13 @@
 
 .previewWindow {
   padding: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(121, 132, 168, 0.16);
   border-radius: 1.75rem;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04)),
-    rgba(7, 12, 26, 0.5);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.4)),
+    rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(22px);
+  box-shadow: 0 22px 58px rgba(123, 140, 181, 0.1);
 }
 
 .previewHeader {
@@ -23,7 +24,7 @@
   width: 0.75rem;
   height: 0.75rem;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.24);
+  background: rgba(121, 132, 168, 0.26);
 }
 
 .previewStage {
@@ -33,9 +34,9 @@
   border-radius: 1.25rem;
   overflow: hidden;
   background:
-    radial-gradient(circle at 20% 20%, rgba(161, 161, 247, 0.48), transparent 32%),
-    radial-gradient(circle at 80% 26%, rgba(3, 136, 166, 0.38), transparent 28%),
-    linear-gradient(180deg, rgba(12, 18, 37, 0.9), rgba(10, 15, 31, 0.72));
+    radial-gradient(circle at 20% 20%, rgba(150, 120, 248, 0.34), transparent 32%),
+    radial-gradient(circle at 80% 26%, rgba(22, 152, 190, 0.26), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(228, 235, 250, 0.58));
 }
 
 .primaryWave {
@@ -46,9 +47,9 @@
   height: 5rem;
   border-radius: 999px;
   background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.16)),
-    linear-gradient(90deg, rgba(249, 185, 92, 0.4), rgba(3, 136, 166, 0.4));
-  box-shadow: 0 0 2.4rem rgba(161, 161, 247, 0.2);
+    linear-gradient(90deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.44)),
+    linear-gradient(90deg, rgba(217, 69, 184, 0.42), rgba(22, 152, 190, 0.38));
+  box-shadow: 0 0 2.4rem rgba(150, 120, 248, 0.16);
 }
 
 .sideMetric {
@@ -59,18 +60,19 @@
   gap: 0.3rem;
   padding: 0.85rem 1rem;
   border-radius: 1rem;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.62);
   font-size: 0.92rem;
 }
 
 .sideMetric strong {
+  color: var(--text-strong);
   font-size: 0.82rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .sideMetric span {
-  color: rgba(255, 255, 255, 0.74);
+  color: var(--text-muted);
 }
 
 .timeline {
@@ -85,7 +87,7 @@
 .timeline span {
   height: 0.85rem;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.16);
+  background: rgba(121, 132, 168, 0.16);
 }
 
 .timeline span:nth-child(1) {
@@ -112,7 +114,7 @@
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(91, 97, 120, 0.8);
 }
 
 .checklist li::before {
@@ -120,6 +122,6 @@
   width: 0.58rem;
   height: 0.58rem;
   border-radius: 999px;
-  background: #f9b95c;
-  box-shadow: 0 0 1.8rem rgba(249, 185, 92, 0.5);
+  background: #9678f8;
+  box-shadow: 0 0 1.4rem rgba(150, 120, 248, 0.28);
 }
