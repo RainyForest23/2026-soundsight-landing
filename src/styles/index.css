@@ -1,5 +1,17 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
+@font-face {
+  font-family: 'SoundSight Brand';
+  src:
+    local('Tsukushi B Round Gothic'),
+    local('TsukuBRdGothic-Regular'),
+    local('Hiragino Maru Gothic ProN W4'),
+    local('Hiragino Maru Gothic ProN');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 :root {
   --page-max-width: 1180px;
   --app-height: 100vh;
@@ -14,6 +26,7 @@
   --text-strong: #5b6178;
   --text-muted: rgba(91, 97, 120, 0.74);
   --text-faint: rgba(91, 97, 120, 0.56);
+  --brand-font: 'SoundSight Brand', 'Tsukushi B Round Gothic', 'TsukuBRdGothic-Regular', 'Hiragino Maru Gothic ProN', 'Pretendard Variable', sans-serif;
   font-family: 'Pretendard Variable', 'Pretendard', 'Inter', 'SF Pro Display', sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -112,9 +125,8 @@ svg {
 
 .buttonSecondary {
   border: 1px solid rgba(121, 132, 168, 0.16);
-  background: rgba(255, 255, 255, 0.42);
+  background: rgba(255, 255, 255, 0.78);
   color: var(--text-strong);
-  backdrop-filter: blur(18px);
 }
 
 .buttonPrimary:hover,

@@ -7,9 +7,8 @@
   border: 1px solid rgba(121, 132, 168, 0.16);
   border-radius: 2rem;
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.66), rgba(255, 255, 255, 0.34)),
-    rgba(255, 255, 255, 0.28);
-  backdrop-filter: blur(28px);
+    linear-gradient(145deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.62)),
+    rgba(255, 255, 255, 0.74);
   box-shadow: 0 22px 80px rgba(123, 140, 181, 0.12);
 }
 

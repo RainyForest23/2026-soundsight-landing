@@ -17,8 +17,7 @@
   padding: 0.5rem 0.9rem;
   border: 1px solid rgba(121, 132, 168, 0.16);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.48);
-  backdrop-filter: blur(18px);
+  background: rgba(255, 255, 255, 0.78);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.18em;

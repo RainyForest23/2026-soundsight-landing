@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Container } from '../components/common/Container';
 import { DemoHighlight } from '../components/common/DemoHighlight';
@@ -6,8 +7,56 @@ import { siteContent } from '../data/siteContent';
 import { fadeUp, viewport } from '../lib/motion';
 import styles from './DemoSection.module.css';
 
+async function copyText(value: string) {
+  if (navigator.clipboard?.writeText) {
+    await navigator.clipboard.writeText(value);
+    return;
+  }
+
+  const fallback = document.createElement('textarea');
+  fallback.value = value;
+  fallback.setAttribute('readonly', '');
+  fallback.style.position = 'absolute';
+  fallback.style.opacity = '0';
+  document.body.appendChild(fallback);
+  fallback.select();
+  document.execCommand('copy');
+  document.body.removeChild(fallback);
+}
+
 export function DemoSection() {
   const { demo } = siteContent;
+  const [copiedId, setCopiedId] = useState<string | null>(null);
+  const [copyError, setCopyError] = useState<string | null>(null);
+  const copyTimerRef = useRef<number | null>(null);
+  const isExternalDemo = demo.primaryCta.href.startsWith('http');
+
+  useEffect(() => {
+    return () => {
+      if (copyTimerRef.current) {
+        window.clearTimeout(copyTimerRef.current);
+      }
+    };
+  }, []);
+
+  const handleCopy = async (videoId: string, href: string) => {
+    try {
+      await copyText(href);
+      setCopiedId(videoId);
+      setCopyError(null);
+
+      if (copyTimerRef.current) {
+        window.clearTimeout(copyTimerRef.current);
+      }
+
+      copyTimerRef.current = window.setTimeout(() => {
+        setCopiedId(null);
+      }, 1800);
+    } catch {
+      setCopiedId(null);
+      setCopyError('브라우저에서 복사를 허용하지 않았습니다.');
+    }
+  };
 
   return (
     <section className={`section ${styles.section}`} id="demo">
@@ -36,7 +85,12 @@ export function DemoSection() {
             </p>
 
             <div className="buttonRow">
-              <a className="buttonPrimary" href={demo.primaryCta.href}>
+              <a
+                className="buttonPrimary"
+                href={demo.primaryCta.href}
+                target={isExternalDemo ? '_blank' : undefined}
+                rel={isExternalDemo ? 'noreferrer' : undefined}
+              >
                 {demo.primaryCta.label}
               </a>
               <a className="buttonSecondary" href={demo.secondaryCta.href}>
@@ -44,14 +98,42 @@ export function DemoSection() {
               </a>
             </div>
 
+            <div className={styles.referenceBlock}>
+              <div className={styles.referenceHeader}>
+                <span className={styles.referenceLabel}>YouTube Samples</span>
+                <p>아래 항목을 누르면 유튜브 링크가 열리지 않고 바로 복사됩니다.</p>
+              </div>
+
+              <div className={styles.referenceList}>
+                {demo.referenceVideos.map((video) => (
+                  <button
+                    key={video.videoId}
+                    type="button"
+                    className={styles.referenceButton}
+                    onClick={() => void handleCopy(video.videoId, video.href)}
+                  >
+                    <span className={styles.referenceText}>
+                      <strong>{video.title}</strong>
+                      <span>{video.videoId}</span>
+                    </span>
+                    <span className={styles.referenceAction}>
+                      {copiedId === video.videoId ? '복사됨' : '링크 복사'}
+                    </span>
+                  </button>
+                ))}
+              </div>
+
+              {copyError ? <p className={styles.copyError}>{copyError}</p> : null}
+            </div>
+
             <div className={styles.notes}>
               <div>
                 <span>Demo Asset</span>
-                <strong>영상 샘플 또는 시연 URL</strong>
+                <strong>https://sc-soundsight.web.app/</strong>
               </div>
               <div>
-                <span>Supporting Docs</span>
-                <strong>포스터, 발표자료, 프로젝트 소개서</strong>
+                <span>Sample Flow</span>
+                <strong>Interstellar, 헤어질결심, 리틀포레스트 링크 복사</strong>
               </div>
             </div>
           </motion.aside>

@@ -22,9 +22,8 @@
   border-radius: 2rem;
   border: 1px solid rgba(121, 132, 168, 0.16);
   background:
-    linear-gradient(160deg, rgba(255, 255, 255, 0.68), rgba(255, 255, 255, 0.42)),
-    rgba(255, 255, 255, 0.34);
-  backdrop-filter: blur(24px);
+    linear-gradient(160deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.64)),
+    rgba(255, 255, 255, 0.76);
   box-shadow: 0 22px 58px rgba(123, 140, 181, 0.12);
 }
 
@@ -52,6 +51,96 @@
   margin: 0;
   color: var(--text-muted);
   line-height: 1.8;
+}
+
+.referenceBlock {
+  display: grid;
+  gap: 0.9rem;
+  margin-top: 0.2rem;
+  padding: 1rem 1.05rem;
+  border-radius: 1.3rem;
+  border: 1px solid rgba(121, 132, 168, 0.12);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.referenceHeader {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.referenceHeader p {
+  margin: 0;
+  color: rgba(95, 105, 135, 0.74);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.referenceLabel {
+  color: rgba(95, 105, 135, 0.74);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.referenceList {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.referenceButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(121, 132, 168, 0.14);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.referenceButton:hover,
+.referenceButton:focus-visible {
+  transform: translateY(-1px);
+  border-color: rgba(114, 90, 210, 0.28);
+  box-shadow: 0 16px 34px rgba(123, 140, 181, 0.08);
+  outline: none;
+}
+
+.referenceText {
+  display: grid;
+  gap: 0.28rem;
+}
+
+.referenceText strong {
+  color: var(--text-strong);
+  font-size: 0.98rem;
+}
+
+.referenceText span {
+  color: rgba(95, 105, 135, 0.72);
+  font-size: 0.8rem;
+}
+
+.referenceAction {
+  color: #725ad2;
+  font-size: 0.84rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.copyError {
+  color: #b5485c;
+  font-size: 0.84rem;
 }
 
 .notes {
@@ -85,5 +174,12 @@
 @media (max-width: 960px) {
   .grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .referenceButton {
+    align-items: start;
+    flex-direction: column;
   }
 }

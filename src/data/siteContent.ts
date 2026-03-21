@@ -13,7 +13,12 @@ export type FeatureItem = {
   preview: 'radar' | 'path' | 'priority' | 'handoff';
 };
 
-// Replace copy, links, and contact values here when the final brand assets arrive.
+export type DemoReferenceLink = {
+  title: string;
+  videoId: string;
+  href: string;
+};
+
 export const siteContent = {
   hero: {
     badge: 'Google Solution Challenge 2026',
@@ -84,22 +89,39 @@ export const siteContent = {
   },
   demo: {
     eyebrow: 'Demo Section',
-    title: '장면 샘플, 파형, 감정 맵핑, 시야 레이어를 한 흐름으로 보여줄 수 있습니다',
+    title: '실제 웹 데모와 영화 샘플 링크를 한 흐름으로 연결해 바로 시연할 수 있습니다',
     description:
-      '현재 랜딩은 실제 데모 영상만 들어오면 바로 교체 가능한 상태입니다. 영상 샘플, 오디오 반응, AI 해석 결과, 최종 시각 인터페이스까지 같은 스크롤 동선 안에 설명할 수 있도록 설계했습니다.',
+      '실제 SoundSight 데모 웹앱으로 바로 이동할 수 있고, 아래 영화 샘플 링크는 발표나 시연 중 곧바로 복사해서 활용할 수 있도록 구성했습니다.',
     primaryCta: {
-      label: '데모 연결 준비',
-      href: '#contact',
+      label: '데모 바로가기',
+      href: 'https://sc-soundsight.web.app/',
     },
     secondaryCta: {
       label: '시스템 다시 보기',
       href: '#features',
     },
     checkpoints: [
-      '영화나 짧은 영상 장면을 넣을 수 있는 데모 슬롯',
-      '오디오 파형과 감정 변환 결과를 병치하는 설명 구조',
-      '데모 요청, 문의, 자료 링크를 같은 섹션에서 연결',
+      '실제 SoundSight 웹 데모로 바로 이어지는 CTA',
+      '시연용 영화 샘플 링크를 클릭 즉시 복사하는 구조',
+      '오디오 해석 흐름과 발표 자료 연결에 맞춘 설명 영역',
     ],
+    referenceVideos: [
+      {
+        title: '인터스텔라',
+        videoId: 'LmZB58uBRpm6WalM0nNz',
+        href: 'https://www.youtube.com/watch?v=gIHjXDxghqE',
+      },
+      {
+        title: '헤어질결심',
+        videoId: '0iIgjQfSqS4',
+        href: 'https://www.youtube.com/watch?v=0iIgjQfSqS4',
+      },
+      {
+        title: '리틀포레스트',
+        videoId: 'KWG4tYGYgR8ZSnT5HC6K',
+        href: 'https://www.youtube.com/watch?v=6TH1u3n1UY4',
+      },
+    ] satisfies DemoReferenceLink[],
   },
   footer: {
     contactLabel: 'Contact',
